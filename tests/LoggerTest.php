@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SmartAssert\Tests\InvokableLoggingExceptionHandler;
+namespace SmartAssert\Tests\InvokableLogger;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
-use SmartAssert\InvokableLoggingExceptionHandler\LoggableException;
-use SmartAssert\InvokableLoggingExceptionHandler\Logger;
+use SmartAssert\InvokableLogger\LoggableException;
+use SmartAssert\InvokableLogger\Logger;
 
 class LoggerTest extends TestCase
 {

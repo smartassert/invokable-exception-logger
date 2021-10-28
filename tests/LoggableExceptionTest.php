@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace SmartAssert\Tests\InvokableLoggingExceptionHandler;
+namespace SmartAssert\Tests\InvokableLogger;
 
 use PHPUnit\Framework\TestCase;
-use SmartAssert\InvokableLoggingExceptionHandler\LoggableException;
+use SmartAssert\InvokableLogger\LoggableException;
 
 class LoggableExceptionTest extends TestCase
 {

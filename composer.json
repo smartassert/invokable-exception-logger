@@ -1,8 +1,8 @@
 {
-    "name": "smartassert/invokable-logging-exception-handler",
+    "name": "smartassert/invokable-logger",
     "description": "",
     "keywords": [],
-    "homepage": "https://github.com/smartassert/invokable-logging-exception-handler",
+    "homepage": "https://github.com/smartassert/invokable-logger",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -29,8 +29,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SmartAssert\\InvokableLoggingExceptionHandler\\": "src/",
-            "SmartAssert\\Tests\\InvokableLoggingExceptionHandler\\": "tests/"
+            "SmartAssert\\InvokableLogger\\": "src/",
+            "SmartAssert\\Tests\\InvokableLogger\\": "tests/"
         }
     },
     "require": {

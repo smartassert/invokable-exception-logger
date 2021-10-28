@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SmartAssert\InvokableLoggingExceptionHandler;
+namespace SmartAssert\InvokableLogger;
 
 class LoggableException extends \Exception
 {

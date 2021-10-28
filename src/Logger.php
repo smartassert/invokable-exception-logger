@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SmartAssert\InvokableLoggingExceptionHandler;
+namespace SmartAssert\InvokableLogger;
 
 use Psr\Log\LoggerInterface;
 

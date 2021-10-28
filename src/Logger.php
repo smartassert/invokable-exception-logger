@@ -6,7 +6,7 @@ namespace SmartAssert\InvokableLoggingExceptionHandler;
 
 use Psr\Log\LoggerInterface;
 
-class Handler
+class Logger
 {
     public function __construct(
         private LoggerInterface $logger
@@ -14,6 +14,11 @@ class Handler
     }
 
     public function __invoke(\Throwable $exception): void
+    {
+        $this->log($exception);
+    }
+
+    public function log(\Throwable $exception): void
     {
         $this->logger->error((string) (new LoggableException($exception)));
     }

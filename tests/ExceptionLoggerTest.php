@@ -7,23 +7,23 @@ namespace SmartAssert\Tests\InvokableLogger;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
+use SmartAssert\InvokableLogger\ExceptionLogger;
 use SmartAssert\InvokableLogger\LoggableException;
-use SmartAssert\InvokableLogger\Logger;
 
-class LoggerTest extends TestCase
+class ExceptionLoggerTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
 
     public function testInvoke(): void
     {
-        $this->testExecute(function (Logger $logger, \Throwable $exception) {
+        $this->testExecute(function (ExceptionLogger $logger, \Throwable $exception) {
             ($logger)($exception);
         });
     }
 
     public function testLog(): void
     {
-        $this->testExecute(function (Logger $logger, \Throwable $exception) {
+        $this->testExecute(function (ExceptionLogger $logger, \Throwable $exception) {
             $logger->log($exception);
         });
     }
@@ -38,7 +38,7 @@ class LoggerTest extends TestCase
             ->with((string) (new LoggableException($exception)))
         ;
 
-        $logger = new Logger($innerLogger);
+        $logger = new ExceptionLogger($innerLogger);
         ($executable)($logger, $exception);
     }
 }

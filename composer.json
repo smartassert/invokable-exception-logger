@@ -1,8 +1,8 @@
 {
-    "name": "smartassert/invokable-logger",
+    "name": "smartassert/invokable-exception-logger",
     "description": "",
     "keywords": [],
-    "homepage": "https://github.com/smartassert/invokable-logger",
+    "homepage": "https://github.com/smartassert/invokable-exception-logger",
     "type": "library",
     "license": "MIT",
     "authors": [

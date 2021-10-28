@@ -6,7 +6,7 @@ namespace SmartAssert\InvokableLogger;
 
 use Psr\Log\LoggerInterface;
 
-class Logger
+class ExceptionLogger
 {
     public function __construct(
         private LoggerInterface $logger

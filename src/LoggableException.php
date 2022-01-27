@@ -76,10 +76,10 @@ class LoggableException extends \Exception
         $data = [];
 
         $file = $trace[self::TRACE_FILE_KEY] ?? null;
-        $line = $trace[self::TRACE_LINE_KEY] ?? null;
+        $file = is_scalar($file) ? (string) $file : null;
 
-        $file = null === $file ? null : (string) $file;
-        $line = null === $line ? null : (int) $line;
+        $line = $trace[self::TRACE_LINE_KEY] ?? null;
+        $line = is_int($line) ? $line : null;
 
         if (is_string($file) && is_int($line)) {
             $data = $this->createLocationSection($file, $line);

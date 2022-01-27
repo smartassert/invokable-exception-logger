@@ -20,7 +20,7 @@ class LoggableExceptionTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return array<mixed>
      */
     public function jsonSerializeDataProvider(): array
     {
@@ -113,14 +113,25 @@ class LoggableExceptionTest extends TestCase
     {
         self::assertSame($expected['code'], $actual['code']);
         self::assertSame($expected['message'], $actual['message']);
+        self::assertSame($expected['context'], $actual['context']);
+
+        self::assertArrayHasKey('called', $expected);
+        self::assertArrayHasKey('occurred', $expected);
+        self::assertArrayHasKey('called', $actual);
+        self::assertArrayHasKey('occurred', $actual);
+
+        self::assertIsArray($expected['called']);
+        self::assertIsArray($actual['called']);
+        self::assertIsArray($expected['occurred']);
+        self::assertIsArray($actual['occurred']);
+
         self::assertLocationSection($expected['called'], $actual['called']);
         self::assertLocationSection($expected['occurred'], $actual['occurred']);
-        self::assertSame($expected['context'], $actual['context']);
     }
 
     /**
-     * @param array<string, int|string> $expected
-     * @param array<string, int|string> $actual
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
      */
     private static function assertLocationSection(array $expected, array $actual): void
     {

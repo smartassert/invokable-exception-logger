@@ -34,8 +34,8 @@
         }
     },
     "require": {
-        "php": ">=8",
-        "psr/log": "*"
+        "php": "^8.0|^8.1",
+        "psr/log": "^1.0|^2.0|^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
